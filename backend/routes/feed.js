@@ -20,10 +20,8 @@ router.post(
   feedController.createPost
 );
 
-//GET /feed/post/:postId
 router.get('/post/:postId', isAuth, feedController.getPost);
 
-//PUT /feed/post/:postId
 router.put(
   '/post/:postId',
   isAuth,
@@ -34,7 +32,6 @@ router.put(
   feedController.updatePost
 );
 
-//DELETE /feed/post/:postId
 router.delete('/post/:postId', isAuth, feedController.deletePost);
 
 module.exports = router;

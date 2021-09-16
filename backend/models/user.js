@@ -3,27 +3,27 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
   email: {
-    type: 'string',
-    required: true,
+    type: String,
+    required: true
   },
   password: {
-    type: 'string',
-    required: true,
+    type: String,
+    required: true
   },
   name: {
-    type: 'string',
-    required: true,
+    type: String,
+    required: true
   },
   status: {
-    type: 'string',
-    default: 'I am new!',
+    type: String,
+    default: 'I am new!'
   },
   posts: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Post',
-    },
-  ],
+      ref: 'Post'
+    }
+  ]
 });
 
 module.exports = mongoose.model('User', userSchema);
